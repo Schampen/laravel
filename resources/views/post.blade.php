@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    OOGA BOOGA
-    My binga
 
-    <h1> {{ $name }} </h1>
+    <h1>OOGA BOOGA My binga</h1>
+
+    <p> {{ $post->body }} </p>
 </body>
 </html>
