@@ -21,4 +21,14 @@ class ArticlesController extends Controller
 
         return view('articles.show', ['article' => $article]);
     }
+
+    public function create()
+    {
+        return view('articles.create');
+    }
+
+    public function store()
+    {
+        
+    }
 }
