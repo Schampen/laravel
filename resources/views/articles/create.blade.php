@@ -12,7 +12,10 @@
                 <label for="title" class="label">Title</label>
 
                 <div class="control">
-                    <input type="text" class="input" name="title" id="title">
+                    <input type="text" class="input" name="title" id="title" value="{{ old('title') }}">
+                    @error ('title')
+                        <p> {{ $errors->first('title') }} </p>
+                    @enderror
                 </div>
             </div>
 
@@ -20,7 +23,10 @@
                 <label for="excerpt" class="label">Excerpt</label>
 
                 <div class="control">
-                    <textarea name="excerpt" id="excerpt" class="textarea"></textarea>
+                    <textarea name="excerpt" id="excerpt" class="textarea"> {{ old('excerpt') }} </textarea>
+                    @error ('excerpt')
+                        <p> {{ $errors->first('excerpt') }} </p>
+                    @enderror
                 </div>
             </div>
 
@@ -28,7 +34,10 @@
                 <label for="body" class="label">Body</label>
 
                 <div class="control">
-                    <textarea name="body" id="body" class="textarea"></textarea>
+                    <textarea name="body" id="body" class="textarea"> {{ old('body') }} </textarea>
+                    @error ('body')
+                        <p> {{ $errors->first('body') }} </p>
+                    @enderror
                 </div>
             </div>
 
