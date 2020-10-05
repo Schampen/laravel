@@ -6,7 +6,7 @@
         @foreach ($articles as $article)
         <div id="content">
             <div class="title">
-                <a href="/articles/{{ $article->id }}">
+                <a href="{{ $article->path() }}">
                     <h2> {{ $article->title }} </h2>
                 </a>
             </div>
