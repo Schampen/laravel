@@ -9,6 +9,11 @@
             </div>
             <p><img src=" {{ URL::asset('images/banner.jpg') }}" alt="" class="image image-full" /> </p>
             <p> {{ $article->body }} </p>
+            <p> 
+                @foreach ($article->tags as $tag)
+                    <a href="/articles?tag={{ $tag->name }}">{{ $tag->name }}</a>
+                @endforeach
+            </p>
             <p> {{ $article->created_at }} </p>
         </div>
     </div>
