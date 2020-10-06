@@ -21,10 +21,9 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
-        $user_ids = \DB::table('users')->select('id')->get();
-        $user_id = $this->faker->randomElement($user_ids)->id;
+        
         return [
-            'user_id' =>$user_id,
+            'user_id' => UserFactory::class,
             'title' => $this->faker->sentence,
             'excerpt' => $this->faker->sentence,
             'body' => $this->faker->paragraph
