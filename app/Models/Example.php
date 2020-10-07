@@ -4,10 +4,8 @@ namespace App\Models;
 
 class Example
 {
-    protected $collaborator;
-
-    public function __construct(Collaborator $collaborator)
+    public function handle()
     {
-        $this->collaborator = $collaborator;
+        die('it works');
     }
 }
