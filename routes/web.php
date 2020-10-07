@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use App\Http\Controllers\ArticlesController;
 |
 */
 
-Route::get('/', function () {});
+Route::get('/', [PagesController::class, 'home']);
 
 Route::get('/about', function () {
     return view('about', [

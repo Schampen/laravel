@@ -4,8 +4,10 @@ namespace App\Models;
 
 class Example
 {
-    public function go()
+    protected $collaborator;
+
+    public function __construct(Collaborator $collaborator)
     {
-        dump('it works')
+        $this->collaborator = $collaborator;
     }
 }
